@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import java.net.URL;
+import java.net.MalformedURLException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
@@ -23,7 +24,14 @@ public class AppTest {
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
 		caps.setPlatform(Platform.LINUX);
 		//driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), caps);
-		driver = new RemoteWebDriver(new URL("http://redzonetest2.symc.symantec.com/wd/hub"), caps);
+		//driver = new RemoteWebDriver(new URL("http://redzonetest2.symc.symantec.com/wd/hub"), caps);
+		try {
+			driver = new RemoteWebDriver(new URL("http://redzonetest2.symc.symantec.com/wd/hub"), caps);
+			} catch(MalformedURLException e) {
+			    //System.out.println("The url is not well formed: " + url);
+			    System.out.println("The url is not well formed: ");
+			}
+
         String eTitle = "Meet Guru99";
         String aTitle = "";
         // launch Firefox and redirect it to the Base URL
