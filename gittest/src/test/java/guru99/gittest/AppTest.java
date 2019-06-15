@@ -26,8 +26,8 @@ public class AppTest {
 		//driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), caps);
 		//driver = new RemoteWebDriver(new URL("http://redzonetest2.symc.symantec.com/wd/hub"), caps);
 		try {
-			//driver = new RemoteWebDriver(new URL("http://redzonetest2.symc.symantec.com/wd/hub"), caps);
-			driver = new RemoteWebDriver(new URL("http://10.150.131.182/wd/hub"), caps);
+			driver = new RemoteWebDriver(new URL("http://redzonetest2.symc.symantec.com/wd/hub"), caps);
+			//driver = new RemoteWebDriver(new URL("http://10.150.131.182/wd/hub"), caps);
 			} catch(MalformedURLException e) {
 			    //System.out.println("The url is not well formed: " + url);
 			    System.out.println("The url is not well formed: ");
